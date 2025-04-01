@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN"> {/* 指定语言为中文 */}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>考研分数线搜索</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>考研分数线数据搜索</h1>
+
+        <div class="search-form">
+            {/* 输入字段的标签和占位符使用中文 */}
+            <label for="year">年份:</label>
+            <input type="number" id="year" placeholder="例如: 2024">
+
+            <label for="school">学校:</label>
+            <input type="text" id="school" placeholder="输入学校名称 (部分即可)">
+
+            <label for="major">专业:</label>
+            <input type="text" id="major" placeholder="输入专业名称或代码">
+
+            <label for="province">省份:</label>
+            <input type="text" id="province" placeholder="例如: 上海">
+
+            <button id="search-button">搜索</button>
+            <button id="reset-button">重置</button>
+            <span id="status"></span> {/* 用于显示加载状态或结果数量 */}
+        </div>
+
+        <div class="results">
+            <table id="results-table">
+                <thead>
+                    <tr>
+                        {/* 表头使用中文 */}
+                        <th>年份</th>
+                        <th>学校</th>
+                        <th>硕士类型</th>
+                        <th>专业代码</th>
+                        <th>专业名称</th>
+                        <th>总分</th>
+                        <th>政治</th>
+                        <th>英语</th>
+                        <th>专业课一</th>
+                        <th>专业课二</th>
+                        <th>备注</th>
+                        <th>学校省份</th>
+                        <th>学校属性</th>
+                        <th>隶属</th>
+                    </tr>
+                </thead>
+                <tbody id="results-body">
+                    {/* 搜索结果将由 JavaScript 填充到这里 */}
+                </tbody>
+            </table>
+             <p id="no-results" style="display: none; text-align: center; margin-top: 20px;">未找到符合条件的数据。</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
